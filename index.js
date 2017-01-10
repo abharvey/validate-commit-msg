@@ -167,7 +167,7 @@ function getConfig() {
 
 function getGitFolder()
 {
-  var gitDirLocation = './.git';
+  var gitDirLocation = config.gitDirectory || './.git';
   if (!fs.existsSync(gitDirLocation)) {
       throw new Error('Cannot find file ' + gitDirLocation);
   }
